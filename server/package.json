@@ -42,7 +42,7 @@
     "joi": "^17.11.0",
     "joi-password-complexity": "^5.2.0",
     "js-tiktoken": "^1.0.7",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "langchain": "0.0.201",
     "mime": "^3.0.0",
     "moment": "^2.29.4",
