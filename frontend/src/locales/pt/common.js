@@ -3,58 +3,62 @@ const TRANSLATIONS = {
     "workspaces-name": "Nome dos Workspaces",
     error: "erro",
     success: "sucesso",
-    user: "Usuário",
-    selection: "Seleção de Modelo",
-    saving: "Salvando...",
-    save: "Salvar alterações",
+    user: "Utilizador",
+    selection: "Seleção do Modelo",
+    saving: "A guardar...",
+    save: "Guardar alterações",
     previous: "Página Anterior",
     next: "Próxima Página",
   },
 
   // Setting Sidebar menu items.
   settings: {
-    title: "Configurações da Instância",
+    title: "Definições da Instância",
     system: "Preferências do Sistema",
     invites: "Convite",
-    users: "Usuários",
+    users: "Utilizadores",
     workspaces: "Workspaces",
-    "workspace-chats": "Chat do Workspace",
-    appearance: "Aparência",
+    "workspace-chats": "Chats dos Workspaces",
+    customization: "Personalização",
     "api-keys": "Chaves API",
     llm: "Preferência de LLM",
     transcription: "Modelo de Transcrição",
     embedder: "Preferências de Embedding",
     "text-splitting": "Divisão e Segmentação de Texto",
-    "vector-database": "Banco de Dados Vetorial",
-    embeds: "Widgets de Embed de Chat",
-    "embed-chats": "Histórico de Chats Embed",
+    "vector-database": "Base de Dados Vetorial",
+    embeds: "Widgets de Chat Incorporáveis",
+    "embed-chats": "Histórico de Chats Incorporados",
     security: "Segurança",
-    "event-logs": "Logs de Eventos",
+    "event-logs": "Registos de Eventos",
     privacy: "Privacidade e Dados",
+    "ai-providers": "Fornecedores de IA",
+    "agent-skills": "Competências dos Agentes",
+    admin: "Administração",
+    tools: "Ferramentas",
   },
 
   // Page Definitions
   login: {
     "multi-user": {
-      welcome: "Bem-vindo ao",
-      "placeholder-username": "Nome de Usuário",
-      "placeholder-password": "Senha",
-      login: "Entrar",
-      validating: "Validando...",
-      "forgot-pass": "Esqueceu a senha",
+      welcome: "Bem-vindo a",
+      "placeholder-username": "Nome de Utilizador",
+      "placeholder-password": "Palavra-passe",
+      login: "Iniciar sessão",
+      validating: "A validar...",
+      "forgot-pass": "Esqueceu-se da palavra-passe",
       reset: "Redefinir",
     },
     "sign-in": {
-      start: "Faça login na sua",
+      start: "Inicie sessão na sua",
       end: "conta.",
     },
   },
 
   // Workspace Settings menu items
   "workspaces—settings": {
-    general: "Configurações Gerais",
-    chat: "Configurações de Chat",
-    vector: "Banco de Dados Vetorial",
+    general: "Definições Gerais",
+    chat: "Definições de Chat",
+    vector: "Base de Dados Vetorial",
     members: "Membros",
     agent: "Configuração do Agente",
   },
@@ -63,17 +67,17 @@ const TRANSLATIONS = {
   general: {
     vector: {
       title: "Contagem de Vetores",
-      description: "Número total de vetores no seu banco de dados vetorial.",
+      description: "Número total de vetores na sua base de dados vetorial.",
     },
     names: {
-      description: "Isso só mudará o nome de exibição do seu workspace.",
+      description: "Isto só mudará o nome de exibição do seu workspace.",
     },
     message: {
       title: "Mensagens de Chat Sugeridas",
       description:
-        "Personalize as mensagens que serão sugeridas aos usuários do seu workspace.",
+        "Personalize as mensagens que serão sugeridas aos utilizadores do seu workspace.",
       add: "Adicionar nova mensagem",
-      save: "Salvar Mensagens",
+      save: "Guardar Mensagens",
       heading: "Explique-me",
       body: "os benefícios do AnythingLLM",
     },
@@ -85,11 +89,14 @@ const TRANSLATIONS = {
       remove: "Remover Imagem do Workspace",
     },
     delete: {
-      delete: "Excluir Workspace",
-      deleting: "Excluindo Workspace...",
-      "confirm-start": "Você está prestes a excluir todo o seu",
+      title: "Eliminar Workspace",
+      description:
+        "Elimina este workspace e todos os seus dados. Isto eliminará o workspace para todos os utilizadores.",
+      delete: "Eliminar Workspace",
+      deleting: "A eliminar Workspace...",
+      "confirm-start": "Está prestes a eliminar todo o seu",
       "confirm-end":
-        "workspace. Isso removerá todas as embeddings vetoriais no seu banco de dados vetorial.\n\nOs arquivos de origem originais permanecerão intactos. Esta ação é irreversível.",
+        "workspace. Isto removerá todas as embeddings vetoriais na sua base de dados vetorial.\n\nOs ficheiros de origem originais permanecerão intocados. Esta ação é irreversível.",
     },
   },
 
@@ -98,14 +105,14 @@ const TRANSLATIONS = {
     llm: {
       title: "Fornecedor de LLM do Workspace",
       description:
-        "O fornecedor e modelo LLM específico que será usado para este workspace. Por padrão, usa o fornecedor e configurações LLM do sistema.",
+        "O fornecedor e modelo LLM específico que será usado para este workspace. Por defeito, usa o fornecedor e configurações LLM do sistema.",
       search: "Pesquisar todos os fornecedores de LLM",
     },
     model: {
       title: "Modelo de Chat do Workspace",
       description:
         "O modelo de chat específico que será usado para este workspace. Se estiver vazio, usará a preferência LLM do sistema.",
-      wait: "-- aguardando modelos --",
+      wait: "-- à espera de modelos --",
     },
     mode: {
       title: "Modo de Chat",
@@ -140,21 +147,21 @@ const TRANSLATIONS = {
       "desc-start": "Quando em modo",
       query: "consulta",
       "desc-end":
-        ", você pode querer devolver uma resposta de recusa personalizada quando não for encontrado contexto.",
+        ", poderá querer devolver uma resposta de recusa personalizada quando não for encontrado contexto.",
     },
     temperature: {
       title: "Temperatura do LLM",
       "desc-start":
         "Esta configuração controla o quão 'criativas' serão as respostas do seu LLM.",
       "desc-end":
-        "Quanto maior o número, mais criativa será a resposta. Para alguns modelos, isso pode levar a respostas incoerentes se definido muito alto.",
+        "Quanto maior o número, mais criativa será a resposta. Para alguns modelos, isto pode levar a respostas incoerentes se definido muito alto.",
       hint: "A maioria dos LLMs tem vários intervalos aceitáveis de valores válidos. Consulte o seu fornecedor de LLM para essa informação.",
     },
   },
 
   // Vector Database
   "vector-workspace": {
-    identifier: "Identificador do banco de dados vetorial",
+    identifier: "Identificador da base de dados vetorial",
     snippets: {
       title: "Máximo de Trechos de Contexto",
       description:
@@ -171,12 +178,12 @@ const TRANSLATIONS = {
       high: "Alta (pontuação de similaridade ≥ .75)",
     },
     reset: {
-      reset: "Redefinir Banco de Dados Vetorial",
-      resetting: "Limpando vetores...",
+      reset: "Redefinir Base de Dados Vetorial",
+      resetting: "A limpar vetores...",
       confirm:
-        "Você está prestes a redefinir o banco de dados vetorial deste workspace. Isso removerá todas as embeddings vetoriais atualmente embebidas.\n\nOs arquivos de origem originais permanecerão intactos. Esta ação é irreversível.",
-      error: "O banco de dados vetorial do workspace não pôde ser redefinido!",
-      success: "O banco de dados vetorial do workspace foi redefinido!",
+        "Está prestes a redefinir a base de dados vetorial deste workspace. Isto removerá todas as embeddings vetoriais atualmente embebidas.\n\nOs ficheiros de origem originais permanecerão intocados. Esta ação é irreversível.",
+      error: "A base de dados vetorial do workspace não pôde ser redefinida!",
+      success: "A base de dados vetorial do workspace foi redefinida!",
     },
   },
 
@@ -198,7 +205,7 @@ const TRANSLATIONS = {
       title: "Modelo do Agente do Workspace",
       description:
         "O modelo LLM específico que será usado para o agente @agent deste workspace.",
-      wait: "-- aguardando modelos --",
+      wait: "-- à espera de modelos --",
     },
 
     skill: {
@@ -208,12 +215,12 @@ const TRANSLATIONS = {
       rag: {
         title: "RAG e memória a longo prazo",
         description:
-          'Permita que o agente aproveite seus documentos locais para responder a uma consulta ou peça ao agente para "lembrar" partes de conteúdo para recuperação de memória a longo prazo.',
+          'Permita que o agente aproveite os seus documentos locais para responder a uma consulta ou peça ao agente para "lembrar" peças de conteúdo para recuperação de memória a longo prazo.',
       },
       view: {
         title: "Ver e resumir documentos",
         description:
-          "Permita que o agente liste e resuma o conteúdo dos arquivos do workspace atualmente embebidos.",
+          "Permita que o agente liste e resuma o conteúdo dos ficheiros do workspace atualmente incorporados.",
       },
       scrape: {
         title: "Raspar websites",
@@ -223,28 +230,28 @@ const TRANSLATIONS = {
       generate: {
         title: "Gerar gráficos",
         description:
-          "Permita que o agente padrão gere vários tipos de gráficos a partir de dados fornecidos ou dados no chat.",
+          "Permita que o agente padrão gere vários tipos de gráficos a partir de dados fornecidos ou dados em chat.",
       },
       save: {
-        title: "Gerar e salvar arquivos no navegador",
+        title: "Gerar e guardar ficheiros no navegador",
         description:
-          "Permita que o agente padrão gere e escreva em arquivos que podem ser salvos e baixados no seu navegador.",
+          "Permita que o agente padrão gere e escreva em ficheiros que podem ser guardados e descarregados no seu navegador.",
       },
       web: {
         title: "Pesquisa na web e navegação ao vivo",
         "desc-start":
-          "Permita que seu agente pesquise na web para responder às suas perguntas conectando-se a um fornecedor de pesquisa na web (SERP).",
+          "Permita que o seu agente pesquise na web para responder às suas perguntas conectando-se a um fornecedor de pesquisa na web (SERP).",
         "desc-end":
-          "A pesquisa na web durante as sessões do agente não funcionará até que isso seja configurado.",
+          "A pesquisa na web durante as sessões do agente não funcionará até que isto seja configurado.",
       },
     },
   },
 
   // Workspace Chats
   recorded: {
-    title: "Chats do Workspace",
+    title: "Chats dos Workspaces",
     description:
-      "Estes são todos os chats e mensagens gravadas que foram enviadas pelos usuários ordenadas por data de criação.",
+      "Estes são todos os chats e mensagens gravadas que foram enviadas pelos utilizadores ordenadas por data de criação.",
     export: "Exportar",
     table: {
       id: "Id",
@@ -259,10 +266,11 @@ const TRANSLATIONS = {
   // Appearance
   appearance: {
     title: "Aparência",
-    description: "Personalize as configurações de aparência da sua plataforma.",
+    description: "Personalize as definições de aparência da sua plataforma.",
     logo: {
       title: "Personalizar Logotipo",
-      description: "Carregue seu logotipo personalizado para tornar seu chatbot seu.",
+      description:
+        "Carregue o seu logotipo personalizado para tornar o seu chatbot seu.",
       add: "Adicionar um logotipo personalizado",
       recommended: "Tamanho recomendado: 800 x 200",
       remove: "Remover",
@@ -270,14 +278,15 @@ const TRANSLATIONS = {
     },
     message: {
       title: "Personalizar Mensagens",
-      description: "Personalize as mensagens automáticas exibidas aos seus usuários.",
+      description:
+        "Personalize as mensagens automáticas exibidas aos seus utilizadores.",
       new: "Nova",
       system: "sistema",
-      user: "usuário",
+      user: "utilizador",
       message: "mensagem",
       assistant: "Assistente de Chat AnythingLLM",
-      "double-click": "Clique duplo para editar...",
-      save: "Salvar Mensagens",
+      "double-click": "Duplo clique para editar...",
+      save: "Guardar Mensagens",
     },
     icons: {
       title: "Ícones Personalizados do Rodapé",
@@ -292,8 +301,8 @@ const TRANSLATIONS = {
   api: {
     title: "Chaves API",
     description:
-      "As chaves API permitem ao portador acessar e gerenciar programaticamente esta instância AnythingLLM.",
-    link: "Leia a documentação da API",
+      "As chaves API permitem ao portador aceder e gerir programaticamente esta instância AnythingLLM.",
+    link: "Ler a documentação da API",
     generate: "Gerar Nova Chave API",
     table: {
       key: "Chave API",
@@ -305,29 +314,29 @@ const TRANSLATIONS = {
   llm: {
     title: "Preferência de LLM",
     description:
-      "Estas são as credenciais e configurações para seu fornecedor preferido de chat e embedding LLM. É importante que estas chaves estejam atuais e corretas, caso contrário o AnythingLLM não funcionará corretamente.",
+      "Estas são as credenciais e definições para o seu fornecedor preferido de chat e embedding LLM. É importante que estas chaves estejam atuais e corretas, caso contrário o AnythingLLM não funcionará corretamente.",
     provider: "Fornecedor de LLM",
   },
 
   transcription: {
     title: "Preferência do Modelo de Transcrição",
     description:
-      "Estas são as credenciais e configurações para seu fornecedor preferido de modelo de transcrição. É importante que estas chaves estejam atuais e corretas, caso contrário, os arquivos de mídia e áudio não serão transcritos.",
+      "Estas são as credenciais e definições para o seu fornecedor preferido de modelo de transcrição. É importante que estas chaves estejam atuais e corretas, caso contrário, os ficheiros de mídia e áudio não serão transcritos.",
     provider: "Fornecedor de Transcrição",
     "warn-start":
-      "Usar o modelo whisper local em máquinas com RAM ou CPU limitadas pode travar o AnythingLLM ao processar arquivos de mídia.",
+      "Usar o modelo whisper local em máquinas com RAM ou CPU limitadas pode bloquear o AnythingLLM ao processar ficheiros de mídia.",
     "warn-recommend":
-      "Recomendamos pelo menos 2GB de RAM e carregar arquivos com menos de 10Mb.",
+      "Recomendamos pelo menos 2GB de RAM e carregar ficheiros com menos de 10Mb.",
     "warn-end":
-      "O modelo embutido será automaticamente baixado na primeira utilização.",
+      "O modelo embutido será automaticamente descarregado na primeira utilização.",
   },
 
   embedding: {
     title: "Preferência de Embedding",
     "desc-start":
-      "Ao usar um LLM que não suporta nativamente um motor de embedding, pode ser necessário especificar adicionalmente as credenciais para embedding de texto.",
+      "Ao usar um LLM que não suporta nativamente um motor de embedding, poderá ser necessário especificar adicionalmente as credenciais para embedding de texto.",
     "desc-end":
-      "O embedding é o processo de transformar texto em vetores. Estas credenciais são necessárias para transformar seus arquivos e prompts em um formato que o AnythingLLM possa usar para processar.",
+      "O embedding é o processo de transformar texto em vetores. Estas credenciais são necessárias para transformar os seus ficheiros e prompts em um formato que o AnythingLLM possa usar para processar.",
     provider: {
       title: "Fornecedor de Embedding",
       description:
@@ -338,16 +347,16 @@ const TRANSLATIONS = {
   text: {
     title: "Preferências de Divisão e Segmentação de Texto",
     "desc-start":
-      "Às vezes, você pode querer alterar a forma padrão como novos documentos são divididos e segmentados antes de serem inseridos no seu banco de dados vetorial.",
+      "Às vezes, poderá querer alterar a forma padrão como novos documentos são divididos e segmentados antes de serem inseridos na sua base de dados vetorial.",
     "desc-end":
-      "Você deve alterar esta configuração apenas se compreender como a divisão de texto funciona e seus efeitos colaterais.",
+      "Deve alterar esta definição apenas se compreender como a divisão de texto funciona e os seus efeitos colaterais.",
     "warn-start": "As alterações aqui aplicar-se-ão apenas a",
-    "warn-center": "documentos embebidos recentemente",
+    "warn-center": "documentos a serem incorporados",
     "warn-end": ", não aos documentos existentes.",
     size: {
       title: "Tamanho do Segmento de Texto",
       description:
-        "Este é o comprimento máximo de caracteres que podem estar presentes em um único vetor.",
+        "Este é o comprimento máximo de caracteres que podem estar presentes num único vetor.",
       recommend: "Comprimento máximo do modelo de embedding é",
     },
 
@@ -360,11 +369,11 @@ const TRANSLATIONS = {
 
   // Vector Database
   vector: {
-    title: "Banco de Dados Vetorial",
+    title: "Base de Dados Vetorial",
     description:
-      "Estas são as credenciais e configurações para o funcionamento da sua instância AnythingLLM. É importante que estas chaves estejam atuais e corretas.",
+      "Estas são as credenciais e definições para o funcionamento da sua instância AnythingLLM. É importante que estas chaves estejam atuais e corretas.",
     provider: {
-      title: "Fornecedor de Banco de Dados Vetorial",
+      title: "Fornecedor de Base de Dados Vetorial",
       description: "Não é necessária nenhuma configuração para LanceDB.",
     },
   },
@@ -373,7 +382,7 @@ const TRANSLATIONS = {
   embeddable: {
     title: "Widgets de Chat Incorporáveis",
     description:
-      "Widgets de chat incorporáveis são interfaces de chat públicas que estão ligadas a um único workspace. Estes permitem construir workspaces que você pode publicar para o mundo.",
+      "Widgets de chat incorporáveis são interfaces de chat públicas que estão ligadas a um único workspace. Estes permitem construir workspaces que pode publicar para o mundo.",
     create: "Criar embed",
     table: {
       workspace: "Workspace",
@@ -383,9 +392,9 @@ const TRANSLATIONS = {
   },
 
   "embed-chats": {
-    title: "Incorporar Chats",
+    title: "Chats Incorporados",
     description:
-      "Estes são todos os chats e mensagens gravadas de qualquer embed que você tenha publicado.",
+      "Estes são todos os chats e mensagens gravadas de qualquer chat incorporado que tenha publicado.",
     table: {
       embed: "Embed",
       sender: "Remetente",
@@ -396,39 +405,39 @@ const TRANSLATIONS = {
   },
 
   multi: {
-    title: "Modo Multiusuário",
+    title: "Modo Multi-Utilizador",
     description:
-      "Configure sua instância para suportar sua equipe ativando o Modo Multiusuário.",
+      "Configure a sua instância para suportar a sua equipa ativando o Modo Multi-Utilizador.",
     enable: {
-      "is-enable": "Modo Multiusuário está Ativado",
-      enable: "Ativar Modo Multiusuário",
+      "is-enable": "Modo Multi-Utilizador está Ativado",
+      enable: "Ativar Modo Multi-Utilizador",
       description:
-        "Por padrão, você será o único administrador. Como administrador, você precisará criar contas para todos os novos usuários ou administradores. Não perca sua senha, pois apenas um usuário administrador pode redefinir senhas.",
-      username: "Nome de usuário da conta de administrador",
-      password: "Senha da conta de administrador",
+        "Por defeito, será o único administrador. Como administrador, terá de criar contas para todos os novos utilizadores ou administradores. Não perca a sua palavra-passe, pois apenas um utilizador administrador pode redefinir as palavras-passe.",
+      username: "Nome de utilizador da conta de administrador",
+      password: "Palavra-passe da conta de administrador",
     },
     password: {
-      title: "Proteção por Senha",
+      title: "Proteção por Palavra-Passe",
       description:
-        "Proteja sua instância AnythingLLM com uma senha. Se esquecer esta senha, não há método de recuperação, por isso, assegure-se de que a guarda.",
+        "Proteja a sua instância AnythingLLM com uma palavra-passe. Se esquecer esta palavra-passe, não há método de recuperação, por isso, assegure-se de que a guarda em segurança.",
     },
     instance: {
-      title: "Proteger Instância por Senha",
+      title: "Proteger Instância por Palavra-Passe",
       description:
-        "Por padrão, você será o único administrador. Como administrador, você precisará criar contas para todos os novos usuários ou administradores. Não perca sua senha, pois apenas um usuário administrador pode redefinir senhas.",
-      password: "Senha da instância",
+        "Por defeito, será o único administrador. Como administrador, terá de criar contas para todos os novos utilizadores ou administradores. Não perca a sua palavra-passe, pois apenas um utilizador administrador pode redefinir as palavras-passe.",
+      password: "Palavra-passe da instância",
     },
   },
 
   // Event Logs
   event: {
-    title: "Logs de Eventos",
+    title: "Registos de Eventos",
     description:
-      "Veja todas as ações e eventos que ocorrem nesta instância para monitoramento.",
-    clear: "Limpar Logs de Eventos",
+      "Veja todas as ações e eventos que ocorrem nesta instância para monitorização.",
+    clear: "Limpar Registos de Eventos",
     table: {
       type: "Tipo de Evento",
-      user: "Usuário",
+      user: "Utilizador",
       occurred: "Ocorreu em",
     },
   },
@@ -437,11 +446,11 @@ const TRANSLATIONS = {
   privacy: {
     title: "Privacidade e Gestão de Dados",
     description:
-      "Esta é a sua configuração para como os fornecedores terceiros conectados e o AnythingLLM gerenciam seus dados.",
+      "Esta é a sua configuração para como os fornecedores terceiros conectados e o AnythingLLM gerem os seus dados.",
     llm: "Seleção de LLM",
     embedding: "Preferência de Embedding",
-    vector: "Banco de Dados Vetorial",
-    anonymous: "Telemetria Anônima Ativada",
+    vector: "Base de Dados Vetorial",
+    anonymous: "Telemetria Anónima Ativada",
   },
 };
 

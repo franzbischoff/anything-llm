@@ -19,8 +19,8 @@ import Spanish from "./es/common.js";
 import French from "./fr/common.js";
 import Mandarin from "./zh/common.js";
 import Russian from "./ru/common.js";
-import Portuguese from "./pt-PT/common.js";
-import Brazilian from "./pt-BR/common.js";
+import Portuguese from "./pt/common.js";
+import Brazilian from "./ptbr/common.js";
 
 export const defaultNS = "common";
 export const resources = {
@@ -39,10 +39,10 @@ export const resources = {
   ru: {
     common: Russian,
   },
-  "pt-PT": {
+  pt: {
     common: Portuguese,
   },
-  "pt-BR": {
-    common: Brazilian,
-  }
+  // ptbr: {
+  //   common: Brazilian,
+  // },
 };
